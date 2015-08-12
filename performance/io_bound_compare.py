@@ -11,7 +11,7 @@ logger.setLevel(logging.DEBUG)
 
 
 # url = 'http://www.baidu.com/'
-url = 'http://127.0.0.1/'
+url = 'http://127.0.0.1/1'
 
 LOOP = 1000
 elapsed_time = {}
@@ -57,7 +57,7 @@ elapsed_time['Processed'] = stop - start
 # Multiprocessing pool execution
 logger.info('Multiprocessing pool execution')
 start = time.time()
-pool = multiprocessing.Pool(processes=10)
+pool = multiprocessing.Pool(processes=100)
 for i in xrange(LOOP):
     pool.apply_async(get_url, (url, ))
 pool.close()

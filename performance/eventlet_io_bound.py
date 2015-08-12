@@ -10,7 +10,7 @@ logger = logging.getLogger('eventlet')
 logger.setLevel(logging.DEBUG)
 
 LOOP = 1000
-URL = 'http://127.0.0.1/'
+URL = 'http://127.0.0.1/1'
 elapsed_time = {}
 
 

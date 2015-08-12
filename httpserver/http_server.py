@@ -13,8 +13,9 @@ class WsgiApp(object):
         print('WsgiApp init')
 
     def __call__(self, environ, start_response):
+        sleep_time = float(environ.get('PATH_INFO').split('/')[1])
+        time.sleep(sleep_time)
         body = ["Hello World"]
-        time.sleep(0.1)
         start_response('200 OK', [('Content-Type', 'application/json')])
         return body
 
