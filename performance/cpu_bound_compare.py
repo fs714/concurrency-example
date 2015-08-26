@@ -8,8 +8,8 @@ logging.basicConfig()
 logger = logging.getLogger("thread_is_slow")
 logger.setLevel(logging.DEBUG)
 
-LOOP = 5
-NUM = 100000000
+LOOP = 50
+NUM = 10000000
 elapsed_time = {}
 
 
