@@ -10,7 +10,7 @@ logger = logging.getLogger('eventlet')
 logger.setLevel(logging.DEBUG)
 
 LOOP = 1000
-URL = 'http://127.0.0.1/1'
+URL = 'http://127.0.0.1:1234/1'
 elapsed_time = {}
 
 
@@ -26,7 +26,7 @@ def get_url(url):
 # With green urllib
 logger.info('With green urllib')
 start = time.time()
-pool = eventlet.GreenPool(200)
+pool = eventlet.GreenPool(1000)
 for i in xrange(LOOP):
     pool.spawn(fetch, URL)
 pool.waitall()
@@ -39,7 +39,7 @@ eventlet.patcher.monkey_patch(all=True)
 
 logger.info('With monkey patched requests')
 start = time.time()
-pool = eventlet.GreenPool(200)
+pool = eventlet.GreenPool(1000)
 for i in xrange(LOOP):
     pool.spawn(get_url, URL)
 pool.waitall()
