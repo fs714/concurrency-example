@@ -6,7 +6,7 @@ from concurrent import futures
 import grpc
 
 from grpc_example.route_guide import route_guide_resources
-from grpc_example.route_guide.proto import route_guide_pb2, route_guide_pb2_grpc
+from grpc_example.route_guide.pb_route_guide import route_guide_pb2, route_guide_pb2_grpc
 
 _ONE_DAY_IN_SECONDS = 60 * 60 * 24
 

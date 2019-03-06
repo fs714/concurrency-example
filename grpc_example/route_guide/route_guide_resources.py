@@ -1,6 +1,6 @@
 import json
 
-from grpc_example.route_guide.proto import route_guide_pb2
+from grpc_example.route_guide.pb_route_guide import route_guide_pb2
 
 
 def read_route_guide_database():

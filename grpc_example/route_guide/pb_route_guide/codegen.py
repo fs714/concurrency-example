@@ -7,5 +7,5 @@ protoc.main((
     '--proto_path=.',
     '--python_out=.',
     '--grpc_python_out=.',
-    './grpc_example/route_guide/proto/route_guide.proto',
+    './grpc_example/route_guide/pb_route_guide/route_guide.proto',
 ))
